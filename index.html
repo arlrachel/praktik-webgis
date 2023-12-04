@@ -99,6 +99,16 @@
                 },
                 mouseover: highlightFeature,
             });
+              <tr>\
+                        <td colspan="2">' + (feature.properties['Foto'] !== null ? autolinker.link(feature.properties['Foto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Fotoo'] !== null ? autolinker.link(feature.properties['Fotoo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Foto Kampus</th>\
+                        <td>' + (feature.properties['Foto Kampus'] !== null ? '<img src="images/' + String(feature.properties['Foto Kampus']).replace(/[\\\/:]/g, '_').trim() + '" '+'class=popupImage'+'>':") + '</td>\
+                    </tr>\
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Nama</th>\
@@ -107,16 +117,6 @@
                     <tr>\
                         <th scope="row">Kampus</th>\
                         <td>' + (feature.properties['Kampus'] !== null ? autolinker.link(feature.properties['Kampus'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Foto'] !== null ? autolinker.link(feature.properties['Foto'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Fotoo'] !== null ? autolinker.link(feature.properties['Fotoo'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Foto Kampus</th>\
-                        <td>' + (feature.properties['Foto Kampus'] !== null ? '<img src="images/' + String(feature.properties['Foto Kampus']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Rangking QS</th>\
